@@ -70,6 +70,8 @@ class VendorMarkView: MKAnnotationView {
             imageView.trailingAnchor.constraint(equalTo: bubbleView.trailingAnchor),
             imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        self.centerOffset = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
     }
     
     override var image: UIImage? {
