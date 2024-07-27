@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsUserLocation="YES" showsPointsOfInterest="NO" showsScale="YES" showsUserTrackingButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcu-as-cLS">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <standardMapConfiguration key="preferredConfiguration" elevationStyle="realistic"/>
                             </mapView>
                             <view hidden="YES" alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2G-YM-gcw">
@@ -53,12 +53,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gcu-as-cLS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e1c-kq-fYn"/>
+                            <constraint firstItem="gcu-as-cLS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="e1c-kq-fYn"/>
                             <constraint firstItem="q2G-YM-gcw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jSa-Ru-J6i"/>
                             <constraint firstItem="gcu-as-cLS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jom-Qo-Tzz"/>
                             <constraint firstItem="q2G-YM-gcw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oKB-ki-Qvl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gcu-as-cLS" secondAttribute="trailing" id="spo-52-zv0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gcu-as-cLS" secondAttribute="bottom" id="y0S-gQ-Kgt"/>
+                            <constraint firstAttribute="bottom" secondItem="gcu-as-cLS" secondAttribute="bottom" id="y0S-gQ-Kgt"/>
                         </constraints>
                     </view>
                     <connections>
