@@ -44,7 +44,8 @@ class VendorDetailViewController: UIViewController {
     }
     
     @IBAction func ctaDidTap() {
-        // TODO: Call out to the vendors
+        let hailingVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HVC")
+        self.present(hailingVc, animated: true)
     }
     
     private var player: AVPlayer?

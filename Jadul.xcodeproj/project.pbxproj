@@ -16,6 +16,7 @@
 		E86F1B952C5538BB00BF93B8 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F1B942C5538BB00BF93B8 /* Vendor.swift */; };
 		E86F1B972C5538F500BF93B8 /* VendorMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F1B962C5538F500BF93B8 /* VendorMarkView.swift */; };
 		E86F1B9B2C55394700BF93B8 /* VendorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F1B9A2C55394700BF93B8 /* VendorDetailViewController.swift */; };
+		E88849032C5554D900590087 /* HailingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88849022C5554D900590087 /* HailingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E86F1B942C5538BB00BF93B8 /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		E86F1B962C5538F500BF93B8 /* VendorMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorMarkView.swift; sourceTree = "<group>"; };
 		E86F1B9A2C55394700BF93B8 /* VendorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailViewController.swift; sourceTree = "<group>"; };
+		E88849022C5554D900590087 /* HailingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HailingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				E86F1B9A2C55394700BF93B8 /* VendorDetailViewController.swift */,
 				E86F1B962C5538F500BF93B8 /* VendorMarkView.swift */,
 				E86F1B862C55025800BF93B8 /* Main.storyboard */,
+				E88849022C5554D900590087 /* HailingViewController.swift */,
 				E86F1B892C55025A00BF93B8 /* Assets.xcassets */,
 				E86F1B8B2C55025A00BF93B8 /* LaunchScreen.storyboard */,
 				E86F1B8E2C55025A00BF93B8 /* Info.plist */,
@@ -153,6 +156,7 @@
 				E86F1B972C5538F500BF93B8 /* VendorMarkView.swift in Sources */,
 				E86F1B9B2C55394700BF93B8 /* VendorDetailViewController.swift in Sources */,
 				E86F1B832C55025700BF93B8 /* SceneDelegate.swift in Sources */,
+				E88849032C5554D900590087 /* HailingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

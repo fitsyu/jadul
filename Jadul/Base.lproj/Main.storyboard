@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <standardMapConfiguration key="preferredConfiguration" elevationStyle="realistic"/>
                             </mapView>
-                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2G-YM-gcw">
+                            <view hidden="YES" alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2G-YM-gcw">
                                 <rect key="frame" x="76.666666666666686" y="318.66666666666669" width="240" height="240.00000000000006"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Oyd-he-J5w">
@@ -70,6 +70,63 @@
             </objects>
             <point key="canvasLocation" x="-71" y="-27"/>
         </scene>
+        <!--Hailing View Controller-->
+        <scene sceneID="fKm-ph-eDX">
+            <objects>
+                <viewController storyboardIdentifier="HVC" id="iY6-pm-ScG" customClass="HailingViewController" customModule="Jadul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTY-lw-NxX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIk-2R-Y2w" userLabel="Hailing View">
+                                <rect key="frame" x="76.666666666666686" y="318.66666666666669" width="240" height="240.00000000000006"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waveform.path" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="edd-Lm-ubv">
+                                        <rect key="frame" x="0.0" y="56" width="240" height="129"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="2dX-Zs-MzV"/>
+                                            <constraint firstAttribute="width" constant="240" id="zYh-We-Fjg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-9b-TfM">
+                                        <rect key="frame" x="61.999999999999986" y="192" width="116.00000000000001" height="39"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Stop Hailing"/>
+                                        <connections>
+                                            <action selector="stopTapped" destination="iY6-pm-ScG" eventType="touchUpInside" id="Eil-dU-khe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="edd-Lm-ubv" firstAttribute="centerX" secondItem="cIk-2R-Y2w" secondAttribute="centerX" id="GvI-rC-41p"/>
+                                    <constraint firstItem="edd-Lm-ubv" firstAttribute="centerY" secondItem="cIk-2R-Y2w" secondAttribute="centerY" id="Nj8-Di-GNX"/>
+                                    <constraint firstAttribute="height" constant="240" id="QiQ-gc-uia"/>
+                                    <constraint firstItem="oYT-9b-TfM" firstAttribute="centerX" secondItem="edd-Lm-ubv" secondAttribute="centerX" id="TwX-Mv-DeB"/>
+                                    <constraint firstItem="oYT-9b-TfM" firstAttribute="top" secondItem="edd-Lm-ubv" secondAttribute="bottom" constant="8" id="Ztw-pd-7yD"/>
+                                    <constraint firstAttribute="width" constant="240" id="bJV-Ic-jLI"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Wy-gD-SpJ"/>
+                        <constraints>
+                            <constraint firstItem="cIk-2R-Y2w" firstAttribute="centerX" secondItem="7Wy-gD-SpJ" secondAttribute="centerX" id="jye-lY-Ffk"/>
+                            <constraint firstItem="cIk-2R-Y2w" firstAttribute="centerY" secondItem="7Wy-gD-SpJ" secondAttribute="centerY" id="xcc-eN-aFt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hailingView" destination="cIk-2R-Y2w" id="Fay-Ku-pS0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Af9-km-lfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956" y="-221"/>
+        </scene>
         <!--Vendor Detail View Controller-->
         <scene sceneID="0Gd-AV-lrD">
             <objects>
@@ -96,6 +153,12 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
@@ -171,7 +234,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d14-xx-bGp"/>
-                        <color key="backgroundColor" systemColor="separatorColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="d14-xx-bGp" firstAttribute="trailing" secondItem="3bs-2A-QYt" secondAttribute="trailing" id="6ns-kW-GQ9"/>
                             <constraint firstItem="3bs-2A-QYt" firstAttribute="bottom" secondItem="d14-xx-bGp" secondAttribute="bottom" id="Le8-OZ-s02"/>
@@ -198,11 +261,9 @@
         <image name="figure.wave" catalog="system" width="80" height="128"/>
         <image name="speaker.wave.3.fill" catalog="system" width="128" height="84"/>
         <image name="vendor" width="40" height="45.666667938232422"/>
+        <image name="waveform.path" catalog="system" width="128" height="113"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="separatorColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
