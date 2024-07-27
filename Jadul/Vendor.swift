@@ -24,6 +24,6 @@ struct Vendor: Decodable {
     struct LocationTime: Decodable {
         let lat: Double
         let lng: Double
-        let time: String
+        let time: String?
     }
 }
