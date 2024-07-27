@@ -11,7 +11,7 @@ import AVFoundation
 struct VendorDetailViewModel {
     let name: String
     let audio: URL
-    let image: URL?
+    let image: URL
     let items: [(name: String, price: String)]
 }
 
@@ -43,6 +43,16 @@ class VendorDetailViewController: UIViewController {
         self.model = model
         label.text = model.name
         tableView.reloadData()
+        
+        URLSession.shared.dataTask(with: URLRequest(url: model.image)) { [weak self] data, _, _ in
+            DispatchQueue.main.async {
+                self?.setImage(data: data!)
+            }
+        }.resume()
+    }
+    
+    private func setImage(data: Data) {
+        self.imageView.image = UIImage(data: data)
     }
     
     @IBAction func ctaDidTap() {

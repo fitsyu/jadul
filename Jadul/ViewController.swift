@@ -141,7 +141,7 @@ extension ViewController: MKMapViewDelegate {
         let model = VendorDetailViewModel(
             name: vendor.name,
             audio: vendor.audio,
-            image: nil, // TODO: Parse & pass here
+            image: vendor.image,
             items: vendor.items.map { (name: $0.name, price: "Rp \($0.price)") } // TODO: Format price
         )
         

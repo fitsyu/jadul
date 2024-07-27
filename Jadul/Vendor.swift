@@ -11,6 +11,7 @@ struct Vendor: Decodable {
     let id: Int
     let name: String
     let audio: URL
+    let image: URL
     
     let items: [Item]
     let locationTime: [LocationTime]
