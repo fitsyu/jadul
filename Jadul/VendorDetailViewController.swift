@@ -43,7 +43,6 @@ class VendorDetailViewController: UIViewController {
         self.model = model
         label.text = model.name
         tableView.reloadData()
-        contentView.heightAnchor.constraint(equalToConstant: scrollView.contentSize.height).isActive = true
     }
     
     @IBAction func ctaDidTap() {
