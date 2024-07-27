@@ -64,8 +64,7 @@ class ViewController: UIViewController {
         self.vendors = vendors
         vendors.forEach { vendor in
             
-            let firstLocation = vendor.locationTime.first!
-            let coordinate = CLLocationCoordinate2D(latitude: firstLocation.lat, longitude: firstLocation.lng)
+            let coordinate = CLLocationCoordinate2D(latitude: vendor.currentLocation.lat, longitude: vendor.currentLocation.lng)
             
             let annotation = MKPointAnnotation()
             annotation.coordinate = coordinate
@@ -84,7 +83,7 @@ class ViewController: UIViewController {
     }
     
     private func center(to coordinate: CLLocationCoordinate2D) {
-        let delta = 0.02
+        let delta = 0.01
         mapView.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)), animated: true)
     }
 }
@@ -122,7 +121,7 @@ extension ViewController: MKMapViewDelegate {
             let renderer = MKPolylineRenderer(polyline: polyline)
             
             let colors: [UIColor] = [UIColor.systemMint, UIColor.systemCyan, UIColor.systemRed]
-            let index = Int.random(in: 0 ..< colors.count-1)
+            let index = Int.random(in: 0 ..< colors.count)
             let color = colors[index]
             
             renderer.strokeColor = color
@@ -141,7 +140,7 @@ extension ViewController: MKMapViewDelegate {
         let model = VendorDetailViewModel(
             name: vendor.name,
             audio: vendor.audio,
-            image: nil, // TODO: Parse & pass here
+            image: vendor.image,
             items: vendor.items.map { (name: $0.name, price: "Rp \($0.price)") } // TODO: Format price
         )
         
