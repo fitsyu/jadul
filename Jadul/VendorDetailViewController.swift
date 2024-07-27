@@ -28,6 +28,8 @@ class VendorDetailViewController: UIViewController {
 
     var model: VendorDetailViewModel?
     
+    private var audioItem: AVPlayerItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,6 +51,9 @@ class VendorDetailViewController: UIViewController {
                 self?.setImage(data: data!)
             }
         }.resume()
+        
+        self.audioItem = AVPlayerItem(url: model.audio)
+        self.audioDidTap()
     }
     
     private func setImage(data: Data) {
@@ -63,10 +68,9 @@ class VendorDetailViewController: UIViewController {
     private var player: AVPlayer?
     
     @IBAction func audioDidTap() {
-        guard let audio = model?.audio else { return }
+        guard let audioItem else { return }
         
-        let item = AVPlayerItem(url: audio)
-        self.player = AVPlayer(playerItem: item)
+        self.player = AVPlayer(playerItem: audioItem)
         player?.play()
     }
 }
