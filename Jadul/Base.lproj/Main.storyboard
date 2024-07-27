@@ -21,17 +21,48 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <standardMapConfiguration key="preferredConfiguration" elevationStyle="realistic"/>
                             </mapView>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q2G-YM-gcw">
+                                <rect key="frame" x="76.666666666666686" y="318.66666666666669" width="240" height="240.00000000000006"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Oyd-he-J5w">
+                                        <rect key="frame" x="101.33333333333333" y="101.33333333333331" width="36.999999999999986" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading.." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11V-N8-gNe">
+                                        <rect key="frame" x="84.999999999999986" y="154.33333333333331" width="70.000000000000014" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0xS-r4-lEY"/>
+                                    <constraint firstItem="Oyd-he-J5w" firstAttribute="centerY" secondItem="q2G-YM-gcw" secondAttribute="centerY" id="Bw5-Ga-wnS"/>
+                                    <constraint firstItem="Oyd-he-J5w" firstAttribute="centerX" secondItem="q2G-YM-gcw" secondAttribute="centerX" id="Hme-EY-JJV"/>
+                                    <constraint firstItem="11V-N8-gNe" firstAttribute="centerX" secondItem="Oyd-he-J5w" secondAttribute="centerX" id="Zyz-gd-yyw"/>
+                                    <constraint firstItem="Oyd-he-J5w" firstAttribute="bottom" secondItem="11V-N8-gNe" secondAttribute="top" constant="-16" id="mLM-pu-PVh"/>
+                                    <constraint firstAttribute="height" constant="240" id="xPx-CY-Q2V"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gcu-as-cLS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="e1c-kq-fYn"/>
+                            <constraint firstItem="q2G-YM-gcw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jSa-Ru-J6i"/>
                             <constraint firstItem="gcu-as-cLS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jom-Qo-Tzz"/>
+                            <constraint firstItem="q2G-YM-gcw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="oKB-ki-Qvl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gcu-as-cLS" secondAttribute="trailing" id="spo-52-zv0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gcu-as-cLS" secondAttribute="bottom" id="y0S-gQ-Kgt"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loaderView" destination="q2G-YM-gcw" id="yko-yS-OqW"/>
                         <outlet property="mapView" destination="gcu-as-cLS" id="xAc-qa-cP6"/>
                     </connections>
                 </viewController>
@@ -39,8 +70,39 @@
             </objects>
             <point key="canvasLocation" x="-71" y="-27"/>
         </scene>
+        <!--Vendor Detail View Controller-->
+        <scene sceneID="0Gd-AV-lrD">
+            <objects>
+                <viewController id="KNB-Cv-r3i" customClass="VendorDetailViewController" customModule="Jadul" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tdJ-i0-5Pl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW2-K8-GDD">
+                                <rect key="frame" x="16" y="39" width="224" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNp-wK-mca">
+                                <rect key="frame" x="248" y="39" width="114" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="speaker.wave.3.fill" catalog="system" title="Bunyiin"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d14-xx-bGp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3u2-5X-wpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-211.4503816793893" y="-704.22535211267609"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="84"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
