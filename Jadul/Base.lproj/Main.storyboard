@@ -147,33 +147,53 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vendor" translatesAutoresizingMaskIntoConstraints="NO" id="ABS-iL-mSV">
-                                                <rect key="frame" x="16" y="173" width="361" height="150"/>
-                                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uc-0W-QEh">
+                                                <rect key="frame" x="16" y="165" width="361" height="150"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vendor" translatesAutoresizingMaskIntoConstraints="NO" id="ABS-iL-mSV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="150"/>
+                                                        <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="12"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                                <integer key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                                <color key="value" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJF-e5-q10">
+                                                        <rect key="frame" x="293" y="8" width="60" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="6VK-Fm-Cya"/>
+                                                            <constraint firstAttribute="width" secondItem="WJF-e5-q10" secondAttribute="height" id="s34-NG-V4m"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="play"/>
+                                                        <connections>
+                                                            <action selector="audioDidTap" destination="KNB-Cv-r3i" eventType="touchUpInside" id="XOe-K5-4A9"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="ABS-iL-mSV" secondAttribute="bottom" id="OJ7-m0-a20"/>
+                                                    <constraint firstItem="WJF-e5-q10" firstAttribute="top" secondItem="3Uc-0W-QEh" secondAttribute="top" constant="8" id="PZb-YD-sat"/>
+                                                    <constraint firstItem="ABS-iL-mSV" firstAttribute="top" secondItem="3Uc-0W-QEh" secondAttribute="top" id="Squ-bu-QQa"/>
+                                                    <constraint firstItem="ABS-iL-mSV" firstAttribute="leading" secondItem="3Uc-0W-QEh" secondAttribute="leading" id="UB5-pa-h2t"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ABS-iL-mSV" secondAttribute="trailing" id="gzX-Km-CWp"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WJF-e5-q10" secondAttribute="trailing" constant="8" id="kFJ-mi-Lcy"/>
+                                                    <constraint firstAttribute="height" constant="150" id="st9-cc-TGg"/>
+                                                </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="12"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                        <integer key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                                        <color key="value" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJF-e5-q10">
-                                                <rect key="frame" x="318" y="173" width="59" height="59"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="59" id="6VK-Fm-Cya"/>
-                                                    <constraint firstAttribute="width" secondItem="WJF-e5-q10" secondAttribute="height" id="s34-NG-V4m"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="play"/>
-                                                <connections>
-                                                    <action selector="audioDidTap" destination="KNB-Cv-r3i" eventType="touchUpInside" id="XOe-K5-4A9"/>
-                                                </connections>
-                                            </button>
+                                            </view>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cor-to-wBo">
                                                 <rect key="frame" x="16" y="331" width="361" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -203,23 +223,20 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="WJF-e5-q10" firstAttribute="trailing" secondItem="ABS-iL-mSV" secondAttribute="trailing" id="0MH-9V-wHh"/>
                                             <constraint firstItem="m1T-V5-JwH" firstAttribute="leading" secondItem="uP3-Yc-59I" secondAttribute="leading" constant="16" id="1Vh-DY-5QH"/>
+                                            <constraint firstItem="cor-to-wBo" firstAttribute="top" secondItem="3Uc-0W-QEh" secondAttribute="bottom" constant="16" id="58f-xE-wZj"/>
                                             <constraint firstItem="m1T-V5-JwH" firstAttribute="top" secondItem="uP3-Yc-59I" secondAttribute="top" constant="32" id="5Ej-eE-xBh"/>
-                                            <constraint firstItem="ABS-iL-mSV" firstAttribute="height" secondItem="uP3-Yc-59I" secondAttribute="height" multiplier="0.25" id="9g7-QE-NxO"/>
-                                            <constraint firstItem="ABS-iL-mSV" firstAttribute="leading" secondItem="uP3-Yc-59I" secondAttribute="leading" constant="16" id="B88-sm-i84"/>
                                             <constraint firstItem="cor-to-wBo" firstAttribute="leading" secondItem="uP3-Yc-59I" secondAttribute="leading" constant="16" id="CZd-3p-d12"/>
                                             <constraint firstAttribute="height" constant="600" placeholder="YES" id="Dfu-u4-kNk"/>
                                             <constraint firstAttribute="trailing" secondItem="EXF-3Z-Hpc" secondAttribute="trailing" constant="16" id="FyP-LX-VTt"/>
-                                            <constraint firstAttribute="trailing" secondItem="ABS-iL-mSV" secondAttribute="trailing" constant="16" id="GOh-M5-5L7"/>
                                             <constraint firstItem="EXF-3Z-Hpc" firstAttribute="leading" secondItem="uP3-Yc-59I" secondAttribute="leading" constant="16" id="KXV-sz-5zc"/>
-                                            <constraint firstItem="ABS-iL-mSV" firstAttribute="top" secondItem="m1T-V5-JwH" secondAttribute="bottom" constant="24" id="f46-mh-j7o"/>
+                                            <constraint firstItem="3Uc-0W-QEh" firstAttribute="leading" secondItem="uP3-Yc-59I" secondAttribute="leading" constant="16" id="UfO-wT-UqJ"/>
+                                            <constraint firstItem="3Uc-0W-QEh" firstAttribute="top" secondItem="m1T-V5-JwH" secondAttribute="bottom" constant="16" id="b2P-Uq-Hzr"/>
                                             <constraint firstItem="EXF-3Z-Hpc" firstAttribute="top" secondItem="cor-to-wBo" secondAttribute="bottom" constant="8" symbolic="YES" id="g6g-vL-hCY"/>
-                                            <constraint firstItem="WJF-e5-q10" firstAttribute="top" secondItem="ABS-iL-mSV" secondAttribute="top" id="m26-hH-q3g"/>
+                                            <constraint firstAttribute="trailing" secondItem="3Uc-0W-QEh" secondAttribute="trailing" constant="16" id="hoz-Ae-pGi"/>
                                             <constraint firstAttribute="bottom" secondItem="EXF-3Z-Hpc" secondAttribute="bottom" constant="16" id="oFj-YW-6of"/>
                                             <constraint firstAttribute="trailing" secondItem="m1T-V5-JwH" secondAttribute="trailing" constant="16" id="pvW-WF-FfY"/>
                                             <constraint firstAttribute="trailing" secondItem="cor-to-wBo" secondAttribute="trailing" constant="16" id="qm9-1B-iTW"/>
-                                            <constraint firstItem="cor-to-wBo" firstAttribute="top" secondItem="ABS-iL-mSV" secondAttribute="bottom" constant="8" symbolic="YES" id="zTL-oV-Gfy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -246,6 +263,7 @@
                     <connections>
                         <outlet property="contentView" destination="tdJ-i0-5Pl" id="wMg-bQ-zB5"/>
                         <outlet property="ctaButton" destination="EXF-3Z-Hpc" id="rjc-re-Pv7"/>
+                        <outlet property="imageContainerView" destination="3Uc-0W-QEh" id="vsh-HF-dFl"/>
                         <outlet property="imageView" destination="ABS-iL-mSV" id="oBe-WH-aza"/>
                         <outlet property="label" destination="m1T-V5-JwH" id="upL-Mp-pBf"/>
                         <outlet property="scrollView" destination="3bs-2A-QYt" id="iPT-kE-tuF"/>

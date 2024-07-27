@@ -18,6 +18,7 @@ struct VendorDetailViewModel {
 class VendorDetailViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageContainerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var ctaButton: UIButton!
@@ -34,6 +35,8 @@ class VendorDetailViewController: UIViewController {
         tableView.dataSource = self
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableView.automaticDimension
+        
+        imageContainerView.layer.cornerRadius = 12
     }
     
     func setModel(model: VendorDetailViewModel) {
