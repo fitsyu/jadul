@@ -16,8 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="iMA-xp-xkg">
+                                <rect key="frame" x="76.666666666666686" y="0.66666666666668561" width="240" height="875.66666666666652"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cY-oO-7cx">
-                                <rect key="frame" x="151" y="418.33333333333331" width="91.333333333333314" height="40.666666666666686"/>
+                                <rect key="frame" x="151" y="547.33333333333337" width="91.333333333333314" height="40.666666666666629"/>
                                 <string key="text">Jadul
 (Jajan Dulu)</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -28,8 +31,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="iMA-xp-xkg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0FC-gA-PHg"/>
+                            <constraint firstItem="iMA-xp-xkg" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.610687" id="MaJ-Yb-q1j"/>
                             <constraint firstItem="9cY-oO-7cx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dk2-yi-4lh"/>
-                            <constraint firstItem="9cY-oO-7cx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kpW-aA-JAy"/>
+                            <constraint firstItem="9cY-oO-7cx" firstAttribute="top" secondItem="iMA-xp-xkg" secondAttribute="bottom" constant="-329" id="mFN-Yb-bFv"/>
+                            <constraint firstItem="iMA-xp-xkg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xpm-IG-sp1"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,6 +45,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="splash" width="2441.333251953125" height="875.66668701171875"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
