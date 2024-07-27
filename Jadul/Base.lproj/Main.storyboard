@@ -78,18 +78,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIk-2R-Y2w" userLabel="Hailing View">
+                            <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIk-2R-Y2w" userLabel="Hailing View">
                                 <rect key="frame" x="76.666666666666686" y="318.66666666666669" width="240" height="240.00000000000006"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waveform.path" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="edd-Lm-ubv">
-                                        <rect key="frame" x="0.0" y="56" width="240" height="129"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="128" id="2dX-Zs-MzV"/>
-                                            <constraint firstAttribute="width" constant="240" id="zYh-We-Fjg"/>
-                                        </constraints>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DfU-lm-kLV">
+                                        <rect key="frame" x="8" y="8" width="224" height="176"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-9b-TfM">
-                                        <rect key="frame" x="61.999999999999986" y="192" width="116.00000000000001" height="39"/>
+                                        <rect key="frame" x="61.999999999999986" y="191.33333333333331" width="116.00000000000001" height="39"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Stop Hailing"/>
                                         <connections>
@@ -99,12 +96,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="edd-Lm-ubv" firstAttribute="centerX" secondItem="cIk-2R-Y2w" secondAttribute="centerX" id="GvI-rC-41p"/>
-                                    <constraint firstItem="edd-Lm-ubv" firstAttribute="centerY" secondItem="cIk-2R-Y2w" secondAttribute="centerY" id="Nj8-Di-GNX"/>
+                                    <constraint firstItem="DfU-lm-kLV" firstAttribute="top" secondItem="cIk-2R-Y2w" secondAttribute="top" constant="8" id="Nv2-5P-ILa"/>
                                     <constraint firstAttribute="height" constant="240" id="QiQ-gc-uia"/>
-                                    <constraint firstItem="oYT-9b-TfM" firstAttribute="centerX" secondItem="edd-Lm-ubv" secondAttribute="centerX" id="TwX-Mv-DeB"/>
-                                    <constraint firstItem="oYT-9b-TfM" firstAttribute="top" secondItem="edd-Lm-ubv" secondAttribute="bottom" constant="8" id="Ztw-pd-7yD"/>
+                                    <constraint firstAttribute="bottom" secondItem="oYT-9b-TfM" secondAttribute="bottom" constant="9.6666666666667993" id="aY6-WU-WgW"/>
                                     <constraint firstAttribute="width" constant="240" id="bJV-Ic-jLI"/>
+                                    <constraint firstItem="oYT-9b-TfM" firstAttribute="centerX" secondItem="DfU-lm-kLV" secondAttribute="centerX" id="mBs-zi-VMJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="DfU-lm-kLV" secondAttribute="trailing" constant="8" id="pGr-Ob-6uz"/>
+                                    <constraint firstItem="DfU-lm-kLV" firstAttribute="leading" secondItem="cIk-2R-Y2w" secondAttribute="leading" constant="8" id="ur9-uN-VQ0"/>
+                                    <constraint firstItem="oYT-9b-TfM" firstAttribute="top" secondItem="DfU-lm-kLV" secondAttribute="bottom" constant="7.3333333333332575" id="vOC-fX-mL3"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -120,12 +119,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="hailingView" destination="cIk-2R-Y2w" id="Fay-Ku-pS0"/>
+                        <outlet property="hailerView" destination="DfU-lm-kLV" id="AK5-m1-aaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Af9-km-lfI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="-221"/>
+            <point key="canvasLocation" x="954.96183206106866" y="-221.12676056338029"/>
         </scene>
         <!--Vendor Detail View Controller-->
         <scene sceneID="0Gd-AV-lrD">
@@ -261,7 +260,6 @@
         <image name="figure.wave" catalog="system" width="80" height="128"/>
         <image name="speaker.wave.3.fill" catalog="system" width="128" height="84"/>
         <image name="vendor" width="40" height="45.666667938232422"/>
-        <image name="waveform.path" catalog="system" width="128" height="113"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
