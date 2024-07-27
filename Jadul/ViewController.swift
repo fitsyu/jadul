@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loaderView: UIView!
     
+    private var vendors: [Vendor] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,6 +61,7 @@ class ViewController: UIViewController {
     }
     
     private func handleSuccessfulFetch(vendors: [Vendor]) {
+        self.vendors = vendors
         vendors.forEach { vendor in
             
             let firstLocation = vendor.locationTime.first!
@@ -81,7 +84,7 @@ class ViewController: UIViewController {
     }
     
     private func center(to coordinate: CLLocationCoordinate2D) {
-        let delta = 0.05
+        let delta = 0.02
         mapView.setRegion(MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: delta, longitudeDelta: delta)), animated: true)
     }
 }
@@ -131,11 +134,21 @@ extension ViewController: MKMapViewDelegate {
     }
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
         if view.annotation is MKUserLocation { return }
         
-        let dvc = VendorDetailViewController()
-        self.present(dvc, animated: true)
+        guard let vendor = self.vendors.first(where: { $0.name == view.annotation?.title }) else { return }
+        
+        let model = VendorDetailViewModel(
+            name: vendor.name,
+            audio: vendor.audio,
+            image: nil, // TODO: Parse & pass here
+            items: vendor.items.map { (name: $0.name, price: "Rp \($0.price)") } // TODO: Format price
+        )
+        
+        let dvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "dvc") as! VendorDetailViewController
+        self.present(dvc, animated: true, completion: {
+            dvc.setModel(model: model)
+        })
     }
 }
 
