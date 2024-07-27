@@ -13,6 +13,9 @@
 		E86F1B882C55025800BF93B8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E86F1B872C55025800BF93B8 /* Base */; };
 		E86F1B8A2C55025A00BF93B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E86F1B892C55025A00BF93B8 /* Assets.xcassets */; };
 		E86F1B8D2C55025A00BF93B8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E86F1B8C2C55025A00BF93B8 /* Base */; };
+		E86F1B952C5538BB00BF93B8 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F1B942C5538BB00BF93B8 /* Vendor.swift */; };
+		E86F1B972C5538F500BF93B8 /* VendorMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F1B962C5538F500BF93B8 /* VendorMarkView.swift */; };
+		E86F1B9B2C55394700BF93B8 /* VendorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F1B9A2C55394700BF93B8 /* VendorDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E86F1B892C55025A00BF93B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E86F1B8C2C55025A00BF93B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E86F1B8E2C55025A00BF93B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E86F1B942C5538BB00BF93B8 /* Vendor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
+		E86F1B962C5538F500BF93B8 /* VendorMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorMarkView.swift; sourceTree = "<group>"; };
+		E86F1B9A2C55394700BF93B8 /* VendorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VendorDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 				E86F1B802C55025700BF93B8 /* AppDelegate.swift */,
 				E86F1B822C55025700BF93B8 /* SceneDelegate.swift */,
 				E86F1B842C55025800BF93B8 /* ViewController.swift */,
+				E86F1B9A2C55394700BF93B8 /* VendorDetailViewController.swift */,
+				E86F1B962C5538F500BF93B8 /* VendorMarkView.swift */,
 				E86F1B862C55025800BF93B8 /* Main.storyboard */,
 				E86F1B892C55025A00BF93B8 /* Assets.xcassets */,
 				E86F1B8B2C55025A00BF93B8 /* LaunchScreen.storyboard */,
 				E86F1B8E2C55025A00BF93B8 /* Info.plist */,
+				E86F1B942C5538BB00BF93B8 /* Vendor.swift */,
 			);
 			path = Jadul;
 			sourceTree = "<group>";
@@ -139,7 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E86F1B852C55025800BF93B8 /* ViewController.swift in Sources */,
+				E86F1B952C5538BB00BF93B8 /* Vendor.swift in Sources */,
 				E86F1B812C55025700BF93B8 /* AppDelegate.swift in Sources */,
+				E86F1B972C5538F500BF93B8 /* VendorMarkView.swift in Sources */,
+				E86F1B9B2C55394700BF93B8 /* VendorDetailViewController.swift in Sources */,
 				E86F1B832C55025700BF93B8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
