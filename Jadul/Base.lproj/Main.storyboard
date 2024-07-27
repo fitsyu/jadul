@@ -142,13 +142,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="600"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1T-V5-JwH">
-                                                <rect key="frame" x="16" y="32" width="361" height="117"/>
+                                                <rect key="frame" x="16" y="32" width="361" height="77"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Uc-0W-QEh">
-                                                <rect key="frame" x="16" y="165" width="361" height="150"/>
+                                                <rect key="frame" x="16" y="125" width="361" height="150"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vendor" translatesAutoresizingMaskIntoConstraints="NO" id="ABS-iL-mSV">
                                                         <rect key="frame" x="0.0" y="0.0" width="361" height="150"/>
@@ -194,7 +194,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cor-to-wBo">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cor-to-wBo">
                                                 <rect key="frame" x="16" y="331" width="361" height="200"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -224,7 +224,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="m1T-V5-JwH" firstAttribute="leading" secondItem="uP3-Yc-59I" secondAttribute="leading" constant="16" id="1Vh-DY-5QH"/>
-                                            <constraint firstItem="cor-to-wBo" firstAttribute="top" secondItem="3Uc-0W-QEh" secondAttribute="bottom" constant="16" id="58f-xE-wZj"/>
+                                            <constraint firstItem="cor-to-wBo" firstAttribute="top" secondItem="3Uc-0W-QEh" secondAttribute="bottom" constant="56" id="58f-xE-wZj"/>
                                             <constraint firstItem="m1T-V5-JwH" firstAttribute="top" secondItem="uP3-Yc-59I" secondAttribute="top" constant="32" id="5Ej-eE-xBh"/>
                                             <constraint firstItem="cor-to-wBo" firstAttribute="leading" secondItem="uP3-Yc-59I" secondAttribute="leading" constant="16" id="CZd-3p-d12"/>
                                             <constraint firstAttribute="height" constant="600" placeholder="YES" id="Dfu-u4-kNk"/>
