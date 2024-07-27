@@ -188,7 +188,7 @@
                                                     <constraint firstAttribute="height" constant="45" id="bmv-PY-cBg"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="figure.wave" catalog="system" title="HAIL">
+                                                <buttonConfiguration key="configuration" style="plain" image="hand" title="HAIL">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
@@ -258,7 +258,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="figure.wave" catalog="system" width="80" height="128"/>
+        <image name="hand" width="34" height="35"/>
         <image name="play" width="56.333332061767578" height="57"/>
         <image name="vendor" width="40" height="45.666667938232422"/>
         <image name="waveform.path" catalog="system" width="128" height="113"/>
